@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Dodaj ogłoszenie";
+}
+
+<div class="d-flex flex-column align-items-center justify-content-center wrap">
+<h1>Dodaj ogłoszenie</h1>
+    <br />
+    <br />
+    <form asp-action="AdToDB" asp-controller="Home">
+        <h3>Wprowadź tytuł ogłoszenia:</h3>
+        <input type="text" id="title" name="title" size="50" maxlength="50">
+        <br />
+        <br />
+        <h3>Wprowadź treść ogłoszenia:</h3>
+        <textarea name="content" maxlength="2000"></textarea>
+        <br />
+        <br />
+        <input type="submit" class="btn-primary" value="Potwierdź" />
+    </form>
+</div>

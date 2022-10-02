@@ -1,0 +1,19 @@
+﻿input {
+    text-align: center;
+    font-size: 18px;
+}
+
+.wrap {
+    text-align: center;
+    width: 100%;
+}
+
+.wrap #title{
+    font-weight:bold;
+}
+
+textarea{
+    width:800px;
+    height:500px;
+    font-size:18px;
+}
