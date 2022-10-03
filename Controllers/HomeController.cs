@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using TablicaOgloszen.Data;
 using TablicaOgloszen.Models;
 
 namespace TablicaOgloszen.Controllers;
@@ -24,9 +25,16 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public RedirectToActionResult AdToDB(string title, string content)
+    public IActionResult AdToDB(string title, string content)
     {
-
+        var db = new NoticeBoardDBContext();
+        db.Ads.Add(new AdModel
+        {
+            Title = title,
+            Content = content,
+            DateCreated = DateTime.Now
+        });
+        db.SaveChanges();
         return RedirectToAction("Index");
     }
 

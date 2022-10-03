@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "X8k1Se9FHxR9IC/nKYJ5ZHLDXRJgue4UGSDWF2XuCRFkvvaZCkx3sAYayUQXcD6XbL63nrxzN4YKGd9Qy0mFjg==",
+  "dgSpecHash": "pw8CY+KXQw2lbT+ZGzsFzNuWbEr7Di7n6otCATjeZ6kgI2FSEX3TpwHdwtP/Jz4EVGHUOEBd07STAai3VeA15g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\TablicaOgloszen.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Kacper\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Kacper\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Kacper\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Kacper\\.nuget\\packages\\servicestack.interfaces\\6.3.0\\servicestack.interfaces.6.3.0.nupkg.sha512",
     "C:\\Users\\Kacper\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Kacper\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Kacper\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

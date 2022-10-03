@@ -505,6 +505,15 @@
           }
         }
       },
+      "ServiceStack.Interfaces/6.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/ServiceStack.Interfaces.dll": {}
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -1520,6 +1529,20 @@
         "version.txt"
       ]
     },
+    "ServiceStack.Interfaces/6.3.0": {
+      "sha512": "Fj6yQTPlt1v+7JhpIWO/NXXODMwuolAmYxPjngh51DdYErOsM5vr1GndpQjmt97HhkHTeJSbf14QF8DbNpx3Kg==",
+      "type": "package",
+      "path": "servicestack.interfaces/6.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/ServiceStack.Interfaces.dll",
+        "lib/net6.0/ServiceStack.Interfaces.dll",
+        "lib/netstandard2.0/ServiceStack.Interfaces.dll",
+        "servicestack.interfaces.6.3.0.nupkg.sha512",
+        "servicestack.interfaces.nuspec"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -2009,7 +2032,8 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.9",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.9"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.9",
+      "ServiceStack.Interfaces >= 6.3.0"
     ]
   },
   "packageFolders": {
@@ -2070,6 +2094,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.9, )"
+          },
+          "ServiceStack.Interfaces": {
+            "target": "Package",
+            "version": "[6.3.0, )"
           }
         },
         "imports": [
