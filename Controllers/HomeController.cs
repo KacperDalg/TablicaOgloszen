@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TablicaOgloszen.Data;
+using System.Linq;
 using TablicaOgloszen.Models;
 
 namespace TablicaOgloszen.Controllers;
@@ -16,7 +17,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        NoticeBoardDBContext db = new NoticeBoardDBContext();
+        var data = from ad in db.Ads
+                   select ad;
+
+        AdsFromDBModel model = new AdsFromDBModel();
+        model.ListOfAds = data.AsEnumerable().Where(ad => (DateTime.Now - ad.DateCreated).TotalDays <= 10.00).OrderByDescending(ad => ad.DateCreated);
+        return View(model);
     }
 
     public IActionResult NewAdvertisement()
@@ -35,6 +42,7 @@ public class HomeController : Controller
             DateCreated = DateTime.Now
         });
         db.SaveChanges();
+
         return RedirectToAction("Index");
     }
 

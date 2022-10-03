@@ -1,67 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Strona Główna";
+    @model TablicaOgloszen.Models.AdsFromDBModel;
+
 }
 
 <div id="wrap" class="d-flex flex-wrap justify-content-around">
-    @*@{
+    @{
         int i = 0;
-        foreach(){
+        foreach (var ad in Model.ListOfAds)
+        {
             <div id="id-@i" class="advertisement">
-                <h3>@title</h3>
+                <h3>@ad.Title</h3>
                 <hr />
-                <p>@date</p>
-                <p class="content">@content</p>
+                <p>@ad.DateCreated</p>
+                <p class="content">@ad.Content</p>
             </div>
+            i++;
         }
-    }*@
-    <div id="id-0" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content">
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            DSSSSSSSSSSSSSSSSSSS
-        </p>
-    </div>
-    <div id="id-1" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content">
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            DSSSSSSSSSSSSSSSSSSS
-        </p>
-    </div>
-    <div id="id-2" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content">
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            DSSSSSSSSSSSSSSSSSSS
-        </p>
-    </div>
-    <div id="id-3" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content">
-            AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            DSSSSSSSSSSSSSSSSSSS
-        </p>
-    </div>
-    <div id="id-4" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content"></p>
-    </div>
-    <div id="id-5" class="advertisement">
-        <h3>Title</h3>
-        <hr />
-        <p>25-05-2015</p>
-        <p class="content"></p>
-    </div>
+    }
+    @*<div id="id-0" class="advertisement">
+    <h3>Title</h3>
+    <hr />
+    <p>25-05-2015</p>
+    <p class="content">
+    Lorem ipsum.
+    </p>
+    </div>*@
 </div>
 
 <script src="~/js/index.js"></script>
