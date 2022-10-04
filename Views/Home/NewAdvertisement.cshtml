@@ -6,15 +6,16 @@
 <h1>Dodaj ogłoszenie</h1>
     <br />
     <br />
-    <form asp-action="AdToDB" asp-controller="Home">
+    <form asp-action="AddAdToDB" asp-controller="Home">
         <h3>Wprowadź tytuł ogłoszenia:</h3>
-        <input type="text" id="title" name="title" size="50" maxlength="50">
+        <input type="text" id="title" name="title" size="60" maxlength="50" />
         <br />
         <br />
         <h3>Wprowadź treść ogłoszenia:</h3>
-        <textarea name="content" maxlength="2000"></textarea>
+        <textarea name="content" id="content" maxlength="2000"></textarea>
         <br />
         <br />
+        <input id="isOk" name="isOk" type="hidden" value="1" />
         <input type="submit" id="submit" class="btn-primary" value="Potwierdź" />
     </form>
 </div>

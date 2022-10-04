@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using TablicaOgloszen.Data;
-using System.Linq;
 using TablicaOgloszen.Models;
+using static TablicaOgloszen.DatabaseOperations.InsertModelToDatabaseProvider;
+using static TablicaOgloszen.DatabaseOperations.PullModelFromDatabaseProvider;
+using PagedList;
+using PagedList.Mvc;
 
 namespace TablicaOgloszen.Controllers;
 
@@ -17,13 +19,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        NoticeBoardDBContext db = new NoticeBoardDBContext();
-        var data = from ad in db.Ads
-                   select ad;
-
-        AdsFromDBModel model = new AdsFromDBModel();
-        model.ListOfAds = data.AsEnumerable().Where(ad => (DateTime.Now - ad.DateCreated).TotalDays <= 10.00).OrderByDescending(ad => ad.DateCreated);
-        return View(model);
+        return View(PullAdsFromDatabase());
     }
 
     public IActionResult NewAdvertisement()
@@ -32,18 +28,17 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult AdToDB(string title, string content)
+    public IActionResult AddAdToDB(string title, string content, int isOk)
     {
-        var db = new NoticeBoardDBContext();
-        db.Ads.Add(new AdModel
+        if (isOk == 1 && title.Length > 0 && title.Length <= 60 && content.Length > 0 && content.Length <= 2000)
         {
-            Title = title,
-            Content = content,
-            DateCreated = DateTime.Now
-        });
-        db.SaveChanges();
-
-        return RedirectToAction("Index");
+            InsertAdToDatabase(title, content);
+            return RedirectToAction("Index");
+        }
+        else
+        {
+            return RedirectToAction("NewAdvertisement");
+        }
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
