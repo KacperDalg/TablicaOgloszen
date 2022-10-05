@@ -3,7 +3,7 @@ using TablicaOgloszen.Models;
 
 namespace TablicaOgloszen.DatabaseOperations;
 
-public class InsertModelToDatabaseProvider
+public class InsertAdToDatabaseProvider
 {
     public static void InsertAdToDatabase(string title, string content)
     {

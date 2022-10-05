@@ -3,7 +3,7 @@ using TablicaOgloszen.Models;
 
 namespace TablicaOgloszen.DatabaseOperations;
 
-public class PullModelFromDatabaseProvider
+public class PullAdsFromDatabaseProvider
 {
     public static AdsFromDBModel PullAdsFromDatabase()
     {

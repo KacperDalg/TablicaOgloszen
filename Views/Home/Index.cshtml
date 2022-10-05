@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Strona Główna";
     @model IPagedList<AdModel>;
-
 }
 <h1>Tablica ogłoszeń</h1>
 
@@ -25,7 +24,5 @@
 <div class="pager">
     @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page = page}))
 </div>
-
-
 
 <script src="~/js/index.js"></script>

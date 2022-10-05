@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TablicaOgloszen.Models;
-using static TablicaOgloszen.DatabaseOperations.InsertModelToDatabaseProvider;
-using static TablicaOgloszen.DatabaseOperations.PullModelFromDatabaseProvider;
+using static TablicaOgloszen.DatabaseOperations.InsertAdToDatabaseProvider;
+using static TablicaOgloszen.DatabaseOperations.PullAdsFromDatabaseProvider;
 using X.PagedList;
 
 namespace TablicaOgloszen.Controllers;
