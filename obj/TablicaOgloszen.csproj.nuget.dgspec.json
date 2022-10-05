@@ -59,13 +59,13 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
-            "PagedList.Mvc": {
-              "target": "Package",
-              "version": "[4.5.0, )"
-            },
             "ServiceStack.Interfaces": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.4.3, )"
             }
           },
           "imports": [

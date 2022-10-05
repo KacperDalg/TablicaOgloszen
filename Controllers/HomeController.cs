@@ -3,8 +3,7 @@ using System.Diagnostics;
 using TablicaOgloszen.Models;
 using static TablicaOgloszen.DatabaseOperations.InsertModelToDatabaseProvider;
 using static TablicaOgloszen.DatabaseOperations.PullModelFromDatabaseProvider;
-using PagedList;
-using PagedList.Mvc;
+using X.PagedList;
 
 namespace TablicaOgloszen.Controllers;
 
@@ -16,10 +15,11 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
-    public IActionResult Index()
+    public IActionResult Index(int? page)
     {
-        return View(PullAdsFromDatabase());
+        int pageNumber = page ?? 1;
+        int pageSize = 5;
+        return View(PullAdsFromDatabase().ListOfAds.ToPagedList(pageNumber, pageSize));
     }
 
     public IActionResult NewAdvertisement()

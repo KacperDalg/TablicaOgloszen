@@ -1,12 +1,16 @@
-﻿@{
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+@{
     ViewData["Title"] = "Strona Główna";
-    @model TablicaOgloszen.Models.AdsFromDBModel;
+    @model IPagedList<AdModel>;
+
 }
+<h1>Tablica ogłoszeń</h1>
 
 <div id="wrap" class="d-flex flex-wrap justify-content-around">
     @{
         int i = 0;
-        foreach (var ad in Model.ListOfAds)
+        foreach (var ad in Model)
         {
             <div id="id-@i" class="advertisement">
                 <h3>@ad.Title</h3>
@@ -16,7 +20,12 @@
             </div>
             i++;
         }
-    }
+    }  
 </div>
+<div class="pager">
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page = page}))
+</div>
+
+
 
 <script src="~/js/index.js"></script>

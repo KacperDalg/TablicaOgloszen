@@ -18,3 +18,16 @@
 .hidden {
     display: none;
 }
+
+.pagination{
+    font-size: 22px;
+    justify-content: center;
+}
+
+.pagination > * {
+    margin: 10px;
+}
+
+h1{
+    text-align:center;
+}
