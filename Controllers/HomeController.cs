@@ -1,25 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using TablicaOgloszen.Models;
-using static TablicaOgloszen.DatabaseOperations.InsertAdToDatabaseProvider;
-using static TablicaOgloszen.DatabaseOperations.PullAdsFromDatabaseProvider;
 using X.PagedList;
+using TablicaOgloszen.DatabaseOperations;
+using TablicaOgloszen.Data;
 
 namespace TablicaOgloszen.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private IAdRepository adRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController()
     {
-        _logger = logger;
+        this.adRepository = new AdRepository(new NoticeBoardDBContext());
     }
+
     public IActionResult Index(int? page)
     {
         int pageNumber = page ?? 1;
         int pageSize = 5;
-        return View(PullAdsFromDatabase().ListOfAds.ToPagedList(pageNumber, pageSize));
+        return View(adRepository.GetAds().ToPagedList(pageNumber, pageSize));
     }
 
     public IActionResult NewAdvertisement()
@@ -32,13 +33,20 @@ public class HomeController : Controller
     {
         if (isOk == 1 && title.Length > 0 && title.Length <= 60 && content.Length > 0 && content.Length <= 2000)
         {
-            InsertAdToDatabase(title, content);
+            adRepository.InsertAd(title, content);
+            adRepository.Save();
             return RedirectToAction("Index");
         }
         else
         {
             return RedirectToAction("NewAdvertisement");
         }
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        adRepository.Dispose();
+        base.Dispose(disposing);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
