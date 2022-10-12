@@ -17,3 +17,13 @@ textarea{
     height:500px;
     font-size:18px;
 }
+
+.bootbox-close-button{
+    border: none;
+    font-size:20px;
+    background-color: white;
+}
+
+.bootbox-body{
+    text-align:center;
+}
