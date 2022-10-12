@@ -10,8 +10,7 @@
 <li>Otwórz Git Bash i przejdź do lokalizacji, w której ma znajdować się projekt.</li>
 <li>Wpisz polecenie <strong>git clone https://github.com/KacperDalg/TablicaOgloszen.git</strong>.</li>
 <li>Wejdź do utworzonego folderu "TablicaOgloszen" i uruchom plik "TablicaOgloszen.sln" za pomocą Microsoft Visual Studio.</li>
-<li>Mając otwarty projekt przejdź do konsoli menedżera pakietów i wpisz polecenie: <strong>add-migration "initial"</strong></li>
-<li>Następnie wpisz polecenie <strong>update-database</strong></li>
-<li>Uruchom projekt używając kombinacji klaiwszy Ctrl+F5</li>
+<li>Mając otwarty projekt przejdź do konsoli menedżera pakietów i wpisz polecenie: <strong>update-database</strong></li>
+<li>Uruchom projekt używając kombinacji klawiszy Ctrl+F5</li>
 </ul>
 
