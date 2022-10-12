@@ -64,3 +64,5 @@ C:\Users\Kacper\source\repos\TablicaOgloszen\obj\Debug\net6.0\TablicaOgloszen.Mv
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\JetBrains.Annotations.dll
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\X.PagedList.dll
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\package-lock.json
+C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\package.json

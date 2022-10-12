@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iaOdyj+v3vE3lWeRVymM2eSuXFgRPu5bVLKCMTDdayI=",
+  "Hash": "KfmnHJinsECjM5Mr5O5IgeBBUhJWV2c4HL3jreoymhA=",
   "Source": "TablicaOgloszen",
   "BasePath": "_content/TablicaOgloszen",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\js\\bootbox.js",
+      "SourceId": "TablicaOgloszen",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\",
+      "BasePath": "_content/TablicaOgloszen",
+      "RelativePath": "js/bootbox.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\bootbox.js"
     },
     {
       "Identity": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\js\\index.js",

@@ -1,18 +1,30 @@
-﻿var title = document.getElementById("title")
-var content = document.getElementById("content")
+﻿const title = document.getElementById("title")
+const content = document.getElementById("content")
+const errorCode = document.getElementById("errorCode")
 
 function checkAd() {
     if (title.value == "") {
-        alert("Wpisz tytuł ogłoszenia!")
-        document.getElementById("isOk").value = "0";
+        errorCode.value = "1";
     } else if (content.value == "") {
-        alert("Uzupełnij treść ogłoszenia!")
-        document.getElementById("isOk").value = "0";
+        errorCode.value = "2";
     } else if (!confirm("Czy na pewno chcesz dodać ogłoszenie o następującym tytule: " + title.value)) {
-        document.getElementById("isOk").value = "0";
+        errorCode.value = "3";
     } else {
-        alert("Ogłoszenie zostało dodane!")
+        errorCode.value = "0";
     }
 }
 
+function checkErrorCode() {
+    if (window.location.href.indexOf("NewAdvertisement/1") != -1) {
+        bootbox.alert("Uzupełnij tytuł ogłoszenia!");
+    } else if (window.location.href.indexOf("NewAdvertisement/2") != -1) {
+        bootbox.alert("Uzupełnij treść ogłoszenia!");
+    } else if (window.location.href.indexOf("NewAdvertisement/3") != -1) {
+        bootbox.alert("Ogłoszenie nie zostało dodane.");
+    } else if (window.location.href.indexOf("NewAdvertisement/0") != -1) {
+        bootbox.alert("Ogłoszenie zostało dodane.");
+    }
+}
+
+window.addEventListener("load", checkErrorCode)
 document.getElementById("submit").addEventListener("click", checkAd)
