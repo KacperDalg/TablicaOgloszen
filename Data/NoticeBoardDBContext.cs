@@ -11,7 +11,6 @@ public class NoticeBoardDBContext : DbContext
     }
 
     public DbSet<AdModel> Ads { get; set; }
-    public DbSet<StatisticsModel> Statistics { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
