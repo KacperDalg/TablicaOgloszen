@@ -5,7 +5,8 @@ namespace TablicaOgloszen.Data;
 
 public class NoticeBoardDBContext : DbContext
 {
-    public NoticeBoardDBContext() { 
+    public NoticeBoardDBContext()
+    {
 
     }
     public NoticeBoardDBContext(DbContextOptions<NoticeBoardDBContext> options) : base(options)
