@@ -12,7 +12,7 @@ using TablicaOgloszen.Data;
 namespace TablicaOgloszen.Migrations
 {
     [DbContext(typeof(NoticeBoardDBContext))]
-    [Migration("20221012143452_initial")]
+    [Migration("20221026133019_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
