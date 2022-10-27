@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<NoticeBoardDBContext>(options =>
     options.UseSqlServer("Data Source=NoticeBoard.db"));
 builder.Services.BuildServiceProvider().GetService<NoticeBoardDBContext>().Database.Migrate();
+
 builder.Services.AddScoped<IAdRepository, AdRepository>();
+
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 

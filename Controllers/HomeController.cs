@@ -3,17 +3,15 @@ using System.Diagnostics;
 using TablicaOgloszen.Models;
 using X.PagedList;
 using TablicaOgloszen.DatabaseOperations;
-using TablicaOgloszen.Data;
-
 namespace TablicaOgloszen.Controllers;
 
 public class HomeController : Controller
 {
     private IAdRepository adRepository;
 
-    public HomeController()
+    public HomeController(IAdRepository repository)
     {
-        adRepository = new AdRepository(new NoticeBoardDBContext());
+        adRepository = repository;
     }
 
     public IActionResult Index(int? page)

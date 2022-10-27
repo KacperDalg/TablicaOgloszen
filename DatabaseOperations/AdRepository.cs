@@ -7,9 +7,9 @@ public class AdRepository : IAdRepository, IDisposable
 {
     private NoticeBoardDBContext context;
 
-    public AdRepository(NoticeBoardDBContext context)
+    public AdRepository(NoticeBoardDBContext dbContext)
     {
-        this.context = context;
+        context = dbContext;
     }
 
     public IEnumerable<AdModel> GetAds()

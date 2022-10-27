@@ -67,4 +67,3 @@ C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\X.PagedList.Mvc.Co
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\package-lock.json
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\package.json
 C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Kacper\source\repos\TablicaOgloszen\bin\Debug\net6.0\SimpleInjector.dll
