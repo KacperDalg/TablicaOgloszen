@@ -13,7 +13,7 @@ public class HomeController : Controller
 
     public HomeController()
     {
-        this.adRepository = new AdRepository(new NoticeBoardDBContext());
+        adRepository = new AdRepository(new NoticeBoardDBContext());
     }
 
     public IActionResult Index(int? page)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KfmnHJinsECjM5Mr5O5IgeBBUhJWV2c4HL3jreoymhA=",
+  "Hash": "ztrQcHD3yhulzUFxRI4BgXf2qla8PAbUEetHfSoVYrI=",
   "Source": "TablicaOgloszen",
   "BasePath": "_content/TablicaOgloszen",
   "Mode": "Default",
@@ -151,23 +151,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\index.js"
-    },
-    {
-      "Identity": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\js\\newAdvertisement.js",
-      "SourceId": "TablicaOgloszen",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\",
-      "BasePath": "_content/TablicaOgloszen",
-      "RelativePath": "js/newAdvertisement.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\newAdvertisement.js"
     },
     {
       "Identity": "C:\\Users\\Kacper\\source\\repos\\TablicaOgloszen\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
