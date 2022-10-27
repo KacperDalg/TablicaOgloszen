@@ -6,7 +6,7 @@
     <h1>Dodaj ogłoszenie</h1>
     <br />
     <br />
-    <form id="form" asp-action="CheckAd" asp-controller="Home">
+    <form id="form">
         <h3>Wprowadź tytuł ogłoszenia:</h3>
         <input type="text" id="title" name="title" value="" size="60" maxlength="60" />
         <br />
@@ -15,9 +15,32 @@
         <textarea name="content" id="content" value="" maxlength="2000"></textarea>
         <br />
         <br />
-        <input id="errorCode" name="errorCode" type="hidden" value="" />
         <input type="submit" id="submit" class="btn-primary" value="Potwierdź" />
     </form>
 </div>
 
-<script src="~/js/newAdvertisement.js"></script>
+<script type="text/javascript">
+    $("#form").submit(function () {
+        var title = $('#title').val()
+        var content = $('#content').val()
+        if (title.length == 0) {
+            bootbox.alert("Uzupełnij tytuł ogłoszenia!")
+        }
+        if (content.length == 0) {
+            bootbox.alert("Uzupełnij treść ogłoszenia!")
+        }
+        if (title.length > 0 && content.length > 0) {
+            bootbox.confirm("Czy chcesz dodać ogłoszenie o następującym tytule: " + title, function (result) {
+                if (result){
+                    var post = $.post('CheckAd', $('#form').serialize())
+                    bootbox.alert("Ogłoszenie zostało dodane!")
+                    document.getElementById('title').value = "";
+                    document.getElementById('content').value = "";
+                }else{
+                    bootbox.alert("Ogłoszenie nie zostało dodane.")
+                }
+            });  
+        }
+        return false;
+    });
+</script>

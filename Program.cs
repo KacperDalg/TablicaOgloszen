@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using ServiceStack;
 using TablicaOgloszen.Data;
 using TablicaOgloszen.DatabaseOperations;
 

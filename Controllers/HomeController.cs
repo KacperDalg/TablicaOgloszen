@@ -4,8 +4,6 @@ using TablicaOgloszen.Models;
 using X.PagedList;
 using TablicaOgloszen.DatabaseOperations;
 using TablicaOgloszen.Data;
-using ServiceStack.DataAnnotations;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace TablicaOgloszen.Controllers;
 
@@ -25,21 +23,20 @@ public class HomeController : Controller
         return View(adRepository.GetAds().ToPagedList(pageNumber, pageSize));
     }
 
-    [Route("Home/NewAdvertisement/{errorCode?}")]
-    public IActionResult NewAdvertisement(int? errorCode)
+    public IActionResult NewAdvertisement()
     {
         return View();
     }
 
     [HttpPost]
-    public IActionResult CheckAd(string title, string content, int errorCode)
+    public IActionResult CheckAd(string title, string content)
     {
-        if (errorCode == 0 && title.Length > 0 && title.Length <= 60 && content.Length > 0 && content.Length <= 2000)
+        if (title.Length > 0 && title.Length <= 60 && content.Length > 0 && content.Length <= 2000)
         {
             adRepository.InsertAd(title, content);
             adRepository.Save();
         }
-        return RedirectToAction("NewAdvertisement", new { errorCode = errorCode });
+        return RedirectToAction("NewAdvertisement");
     }
 
     protected override void Dispose(bool disposing)
